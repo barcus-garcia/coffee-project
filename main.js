@@ -67,6 +67,23 @@ var coffees = [
     {id: 14, name: 'French', roast: 'Dark'},
 ];
 
+//This function works for the array above
+var inputName = document.querySelector('#input-name');
+var inputRoast = document.querySelector('#input-roast');
+
+function addCoffees () {
+    var addID = coffees.length + 1;
+    var addName = inputName.value.toString();
+    var addRoast = inputRoast.value.toString();
+    var addObject = {id: addID, name: addName, roast: addRoast};
+    coffees.push(addObject);
+
+    coffees.innerHTML = renderCoffees(coffees);
+}
+
+
+
+
 var selection = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -77,3 +94,6 @@ selection.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('change', updateCoffees);
 searchbar.addEventListener('keyup', matchedName);
+
+var addCoffeeButton = document.querySelector('#add-coffee');
+addCoffeeButton.addEventListener('click', addCoffees);
