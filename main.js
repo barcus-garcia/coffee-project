@@ -2,10 +2,10 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-6">';
-    html += '<div class="card text-white bg-secondary mb-3">';
+    html += '<div class="card text-white mb-3">';
     html += '<div class="card-body title-opaque">'
     /*html += '<div>' + coffee.id + '</div>';*/
-    html += '<h5 class="card-tittle">' + coffee.name + '</h5>';
+    html += '<h5 class="card-title">' + coffee.name + '</h5>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '</div>';
     html += '</div>';
