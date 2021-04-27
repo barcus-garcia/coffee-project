@@ -24,3 +24,13 @@ h1 {
 .title-opaque {
     background: rgba(255, 255 , 255, .3);
 }
+
+body {
+
+background: url("img/wodden-wall.jpeg");
+background-size: auto;
+}
+/*.coffee-sel {*/
+/*    margin: 2em;*/
+/*    padding-right: 5em;*/
+/*}*/

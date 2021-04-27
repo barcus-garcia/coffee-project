@@ -8,6 +8,15 @@
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
+<!--NAVBAR-->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Cafecito de Amor</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
 <!--This is the Header img and page title-->
 <div class="jumbotron jumbotron-fluid con-panna-img">
     <div class="container title-opaque">
@@ -15,142 +24,55 @@
         <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
 </div>
+<!--Coffee info-->
 
-<form>
-    <div class="container search-form d-flex">
-        <!--    <label for="roast-selection"></label>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            What Kind Of Coffee Would You Like?
+        </div>
+        <div class="form-group">
+            <label for="roast-selection"></label>
             <div id="submit">
-                <select id="roast-selection">
+                <input id="search" placeholder="Search Coffee" type="search"/>
+                <select id="roast-selection" class="form-control">
                     <option>All Roast</option>
                     <option>Light</option>
                     <option>Medium</option>
                     <option>Dark</option>
                 </select>
-            </div>-->
-
-        <div class="card row d-flex justify-content-start">
-            <div class="card-body">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="roast-selection"></label>
-                        <div id="submit">
-                            <select id="roast-selection">
-                                <option>All Roast</option>
-                                <option>Light</option>
-                                <option>Medium</option>
-                                <option>Dark</option>
-                                <div class="form-group col-md-6">
-                                    <input id="search" placeholder="Search Coffee" type="search"/>
-                                </div>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--    <input id="submit" type="submit"/>-->
-        <!-- This is the add coffee form -->
-
-        <div class="card d-flex">
-            <div class="card-body">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="roast-selection"></label>
-                        <div class="form-group col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    Choose Your Roast
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control" id="input-roast">
-                                        <option>Light</option>
-                                        <option>Medium</option>
-                                        <option>Dark</option>
-                                    </select>
-                                    <input id="input-name" class="" placeholder="Coffee Name"/>
-                                    <br>
-                                    <input id="add-coffee" class="" type="button" value="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-</form>
-
-
-<!--   <table>
-       <thead>
-           <tr>
-               <th>ID</th>
-               <th>NAME</th>
-               <th>ROAST</th>
-           </tr>
-       </thead>
-       <tbody id="coffees"></tbody>
-   </table>-->
-
-
-<div id="coffee-list">
-    <div class="1">
-        <h5 class="name">Light City</h5>
-        <p class="roast">Light</p>
-    </div>
-    <div class="2">
-        <h5 class="name">Half City</h5>
-        <p class="roast">Light</p>
-    </div>
-    <div class="3">
-        <h5 class="name">Cinnamon</h5>
-        <p class="roast">Light</p>
-    </div>
-    <div class="4">
-        <h5 class="name">City</h5>
-        <p class="roast">Medium</p>
-    </div>
-    <div class="5">
-        <h5 class="name">American</h5>
-        <p class="roast">Medium</p>
-    </div>
-    <div class="6">
-        <h5 class="name">Breakfast</h5>
-        <p class="roast">Medium</p>
-    </div>
-    <div class="7">
-        <h5 class="name">High</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="8">
-        <h5 class="name">Continental</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="9">
-        <h5 class="name">New Orleans</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="10">
-        <h5 class="name">European</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="11">
-        <h5 class="name">Espresso</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="12">
-        <h5 class="name">Vietnamese </h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="13">
-        <h5 class="name">Italian</h5>
-        <p class="roast">Dark</p>
-    </div>
-    <div class="14">
-        <h5 class="name">French</h5>
-        <p class="roast">Dark</p>
+    <!-- This is the add coffee form -->
+    <div class="container">
+        <label for="roast-selection"></label>
+        <div class="card">
+            <div class="card-header">
+                Choose Your Roast
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="input-roast">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                    <input id="input-name" class="" placeholder="Coffee Name"/>
+                    <br>
+                    <input id="add-coffee" class="" type="button" value="submit">
+                </select>
+            </div>
+        </div>
     </div>
 </div>
+<div class="col">
+    <div class="container">
+        <div class="row">
+            <div id="coffee-list" class="row">
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <script src="main.js"></script>
