@@ -4,7 +4,6 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee col-6">';
     html += '<div class="card text-white mb-3">';
     html += '<div class="card-body title-opaque">'
-    /*html += '<div>' + coffee.id + '</div>';*/
     html += '<h5 class="card-title">' + coffee.name + '</h5>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '</div>';
@@ -42,9 +41,6 @@ function matchedName (e) {
     var selectedT = roastSelection.value
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        // if (selectedR === "All Roast") {
-        //     selectedR = coffee.roast;
-        // }
         if ((coffee.name.toLowerCase()).includes(selectedR.toLowerCase())) {
             filteredCoffees.push(coffee);
         } else if ((coffee.roast.toLowerCase()).includes(selectedR.toLowerCase())) {
@@ -74,30 +70,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'Dark'},
 ];
 
-//This function works for the array above
-var inputName = document.querySelector('#input-name');
-var inputRoast = document.querySelector('#input-roast');
-
-// var updatedcoffee = "";
 function addCoffees () {
-    //fix this
     var adding = {};
     adding.id = coffees.length + 1;
-    adding.name = document.querySelector('#coffee-list');
-    adding.roast = document.querySelector('#roast-selection');
-    // var addID = coffees.length + 1;
-    // var addName = inputName.value;
-    // var addRoast = inputRoast.value;
-    // var addObject = {id: addID, name: addName, roast: addRoast};
-    // coffees.push(addObject);
+    adding.name = document.querySelector('#input-name').value;
+    adding.roast = document.querySelector('#input-roast').value;
+    coffees.push(adding);
     localStorage.setItem("coffees", JSON.stringify(coffees));
 
-    // selection.innerHTML = renderCoffees(coffees);
-    // roastSelection.value = 'All Roast';
-    // searchbar.value = '';
 }
 var updatedlist = localStorage.getItem("coffees");
-updatedcoffee = JSON.parse(updatedlist);
+var updatedcoffee = JSON.parse(updatedlist);
 
 
 
@@ -107,8 +90,8 @@ var roastSelection = document.querySelector('#roast-selection');
 var searchbar = document.querySelector('#search');
 
 
-selection.innerHTML = renderCoffees(coffees);
-
+selection.innerHTML = renderCoffees(updatedcoffee);
+console.log(updatedcoffee)
 
 submitButton.addEventListener('change', updateCoffees);
 searchbar.addEventListener('keyup', matchedName);
