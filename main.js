@@ -78,18 +78,26 @@ var coffees = [
 var inputName = document.querySelector('#input-name');
 var inputRoast = document.querySelector('#input-roast');
 
+// var updatedcoffee = "";
 function addCoffees () {
-    var addID = coffees.length + 1;
-    var addName = inputName.value;
-    var addRoast = inputRoast.value;
-    var addObject = {id: addID, name: addName, roast: addRoast};
-    coffees.push(addObject);
+    //fix this
+    var adding = {};
+    adding.id = coffees.length + 1;
+    adding.name = document.querySelector('#coffee-list');
+    adding.roast = document.querySelector('#roast-selection');
+    // var addID = coffees.length + 1;
+    // var addName = inputName.value;
+    // var addRoast = inputRoast.value;
+    // var addObject = {id: addID, name: addName, roast: addRoast};
+    // coffees.push(addObject);
+    localStorage.setItem("coffees", JSON.stringify(coffees));
 
-    selection.innerHTML = renderCoffees(coffees);
+    // selection.innerHTML = renderCoffees(coffees);
     // roastSelection.value = 'All Roast';
     // searchbar.value = '';
 }
-
+var updatedlist = localStorage.getItem("coffees");
+updatedcoffee = JSON.parse(updatedlist);
 
 
 
